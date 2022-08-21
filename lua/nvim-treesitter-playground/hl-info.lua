@@ -48,7 +48,7 @@ function M.get_syntax_hl()
             table.insert(matches, "  " .. n1)
         else
             table.insert(matches,
-                         "  " .. n1 .. " lll➙ " .. n2 
+                         "  " .. n1 .. " ➙ " .. n2 
                         )
         end
     end
@@ -75,7 +75,7 @@ function M.show_hl_captures()
     end
 
     if vim.b.current_syntax then
-        table.insert(lines, "Regex")
+        table.insert(lines, "正则")
         local matches = M.get_syntax_hl()
         show_matches(matches)
     end
